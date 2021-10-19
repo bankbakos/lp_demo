@@ -18,9 +18,9 @@ def product():
 def add_to_cart():
     return render_template("addtocart.html")
 
-@app.route('/payment')
+@app.route('/cartvalue')
 def payment():
-    return render_template("payment.html")
+    return render_template("cartvalue.html")
 
 if __name__ == '__main__':
     app.run()

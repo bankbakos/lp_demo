@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 <!-- BEGIN LivePerson Monitor. -->
-    <script type="text/javascript">window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window.lpTag={wl:lpTag.wl||null,scp:lpTag.scp||null,site:'46597900'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:'1.10.0',_tagCount:1,protocol:'https:',events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){t._domReady('domReady')}):(window.addEventListener('DOMContentLoaded',function(){t._domReady('contReady')},!1),window.addEventListener('load',function(){t._domReady('domReady')},!1)),'undefined'===typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;
+        <script type="text/javascript">window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window.lpTag={wl:lpTag.wl||null,scp:lpTag.scp||null,site:'46597900'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:'1.10.0',_tagCount:1,protocol:'https:',events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){t._domReady('domReady')}):(window.addEventListener('DOMContentLoaded',function(){t._domReady('contReady')},!1),window.addEventListener('load',function(){t._domReady('domReady')},!1)),'undefined'===typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;
 
-    </script>
+        </script>
 <!-- Push viewProduct -->
-    <script>
-        function viewProduct(){
+        <script>
+        function viewProduct(currency, name, price){
             lpTag.sdes = lpTag.sdes||[];
             lpTag.sdes.push(
                 {
                     "type": "prodView",  //MANDATORY
-                    "currency": "HUF",  //CURRENCY CODE
+                    "currency": currency,  //CURRENCY CODE
                     "products": [{  //ARRAY OF PRODUCTS
                         "product": {
-                            "name": "Oppo A16s Dual SIM (64GB)",  //PRODUCT NAME
+                            "name": name,  //PRODUCT NAME
                             "category": "Telefonok",  //PRODUCT CATEGORY NAME
                             "sku": "xyz567",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                            "price": 66990,  //SINGLE PRODUCT PRICE
+                            "price": price,  //SINGLE PRODUCT PRICE
                             "statusInStock": "In stock",  //PRODUCT STATUS IN STOCK
                             "quantityInStock": 20  //AVAILABLE QUANTITY IN STOCK
                         }
                     }]
-                });
+                }
+            );
+            document.getElementById("chosen_product_data").innerText="A kiválasztott termék adatai:\nVALUTA: "+currency+"\nNÉV: "+name+ "\nÁR: "+price
         }
     </script>
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
-    <title>Webshop</title>
-</head>
-<body bgcolor="#fff8dc">
-<br>
-<h3>Termék megtekintése</h3>
-<div align="center">
-    <img src="https://www.vodafone.hu/documents/20124/306697/Oppo-A16s-Dual-SIM-64%40900000.png/c3c470e4-628e-2ab1-73db-72560f9bd248?t=1632486462968" alt="Oppo A16s 64GB" width="192" height="277">
-    <h4>Oppo A16s Dual SIM (64GB)</h4>
-    <button onclick="viewProduct()">Megnézem</button>
-    <p id="phoneInfo"></p>
-</div>
-</body>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+        <style>
+            #phones {
+                width: 100%;
+            }
+            #oppo_div {
+                width: 33%;
+                height: 100%;
+                float: left;
+            }
+            #samsung_div {
+                width: 33%;
+                float: left;
+                height: 100%;
+            }
+            #btn_see_oppo {
+                width: 100px;
+                height: 50px;
+                background-color: crimson;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+            #btn_see_samsung {
+                width: 100px;
+                height: 50px;
+                background-color: crimson;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+
+        <title>Webshop</title>
+    </head>
+
+    <body>
+        <img src="{{url_for('static', filename='img/voda.jpg')}}" style="width: 100%;">
+        <br>
+
+        <div id="phones">
+            <div id="oppo_div">
+                <img src="{{url_for('static', filename='img/oppoa16.png')}}" width="192" height="277">
+                <h4>Oppo A16s Dual SIM (64GB)</h4>
+                <button id="btn_see_oppo" onclick="viewProduct('HUF', 'Oppo A16s Dual SIM (64GB)', 66990)">Megnézem</button>
+            </div>
+
+            <div id="samsung_div">
+                <img src="{{url_for('static', filename='img/samsunga52.png')}}" width="85" height="200">
+                <h4>Samsung Galaxy A52s 5G Dual SIM (128GB)</h4>
+                <button id="btn_see_samsung" onclick="viewProduct('HUF', 'Samsung Galaxy A52s 5G Dual SIM (128GB)', 148890)">Megnézem</button>
+            </div>
+
+            <p id="chosen_product_data"></p>
+        </div>
+    </body>
 </html>
