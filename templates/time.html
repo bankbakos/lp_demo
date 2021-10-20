@@ -7,7 +7,7 @@
         <script>
             lpTag.sdes = lpTag.sdes||[];
         </script>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
 
         <style>
@@ -20,25 +20,33 @@
                 vertical-align: center;
                 float: right;
             }
-            #time_body {
-                background: url("/static/img/voda_bg_time.jpg");
+            .bg {
+                /* The image used */
+                background-image: url("/static/img/voda_bg_time.jpg");
+
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         </style>
 
         <title>Time</title>
     </head>
-    <body bgcolor="#fff8dc" id="time_body">
+    <body class="bg">
         <div>
-            <div id="countdown_div">
+            <div id="countdown_div" align="center">
                 <h1 style="font-weight: bold; color: crimson;">30 mp után aktiválódik az ablak</h1>
                 <br>
 
-                <div id="some_div">
+                <div id="remaining_div" style="font-size: large; font-weight: bold;">
                 </div>
             </div>
             <script>
                 var timeLeft = 30;
-                var elem = document.getElementById('some_div');
+                var elem = document.getElementById('remaining_div');
 
                 var timerId = setInterval(countdown, 1000);
 
@@ -46,7 +54,7 @@
                     if (timeLeft == -1) {
                         clearTimeout(timerId);
                     } else {
-                        elem.innerHTML = timeLeft + ' mp van vissza';
+                        elem.innerHTML = timeLeft;
                         timeLeft--;
                     }
                 }
