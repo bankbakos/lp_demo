@@ -23,7 +23,7 @@ def payment():
     return render_template("cartvalue.html")
 
 @app.route('/error')
-def payment():
+def error():
     return render_template("error.html")
 
 @app.route('/test')
