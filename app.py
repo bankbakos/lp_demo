@@ -26,9 +26,18 @@ def payment():
 def error():
     return render_template("error.html")
 
-@app.route('/test')
-def test():
-    return render_template("test.html")
+@app.route('/tobi')
+def tobi():
+    return render_template("tobi.html")
+
+@app.route('/engagement')
+def engagement():
+    return render_template("engagement.html")
+
+@app.route('/echo')
+def echo():
+    return render_template("echo.html")
+
 
 if __name__ == '__main__':
     app.run()
