@@ -38,6 +38,14 @@ def engagement():
 def echo():
     return render_template("echo.html")
 
+@app.route('/auth')
+def auth():
+    return render_template("auth.html")
+
+@app.route('/noauth')
+def noauth():
+    return render_template("noauth.html")
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
