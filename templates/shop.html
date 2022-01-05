@@ -12,18 +12,21 @@
             lpTag.sdes = lpTag.sdes || [];
             lpTag.sdes.push(
                 {
-                    "type": "prodView",  //MANDATORY
+                    "type": "purchase",  //MANDATORY
+                    "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
                     "currency": currency,  //CURRENCY CODE
-                    "products": [{  //ARRAY OF PRODUCTS
-                        "product": {
-                            "name": name,  //PRODUCT NAME
-                            "category": "Telefonok",  //PRODUCT CATEGORY NAME
-                            "sku": "xyz567",  //PRODUCT SKU OR UNIQUE IDENTIFIER
-                            "price": price,  //SINGLE PRODUCT PRICE
-                            "statusInStock": "In stock",  //PRODUCT STATUS IN STOCK
-                            "quantityInStock": 20  //AVAILABLE QUANTITY IN STOCK
-                        }
-                    }]
+                    "orderId": "DRV1534XC",  //UNIQUE ORDER ID OR RECEIPT ID
+                    "cart": {
+                        "products": [{
+                            "product": {
+                                "name": name,  //PRODUCT NAME
+                                "category": "software",  //PRODUCT CATEGORY NAME
+                                "sku": "xyz001",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+                                "price": price  //SINGLE PRODUCT PRICE
+                            },
+                            "quantity": 3  //QUANTITY OF THIS PRODUCT
+                        }]
+                    }
                 }
             );
             document.getElementById("chosen_product_data").innerText = "A kiválasztott termék adatai:\nVALUTA: " + currency + "\nNÉV: " + name + "\nÁR: " + price
@@ -67,6 +70,7 @@
             color: white;
             font-weight: bold;
         }
+
         #btn_see_apple {
             width: 100px;
             height: 50px;
