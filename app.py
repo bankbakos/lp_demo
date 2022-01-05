@@ -56,5 +56,9 @@ def sim():
 def data():
     return render_template("data.html")
 
+@app.route('/shop')
+def shop():
+    return render_template("shop.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
