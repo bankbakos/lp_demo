@@ -10,14 +10,17 @@
     <script>
         
         function viewProduct(currency, name, price) {
-            const now = date.now();
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
             lpTag.sdes = lpTag.sdes || [];
             lpTag.sdes.push(
                 {
                     "type": "purchase",  //MANDATORY
                     "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
                     "currency": currency,  //CURRENCY CODE
-                    "orderId": now,  //UNIQUE ORDER ID OR RECEIPT ID
+                    "orderId": dateTime,  //UNIQUE ORDER ID OR RECEIPT ID
                     "cart": {
                         "products": [{
                             "product": {
