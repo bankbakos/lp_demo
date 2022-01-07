@@ -8,14 +8,16 @@
     </script>
     <!-- Push viewProduct -->
     <script>
+        
         function viewProduct(currency, name, price) {
+            const now = date.now()
             lpTag.sdes = lpTag.sdes || [];
             lpTag.sdes.push(
                 {
                     "type": "purchase",  //MANDATORY
                     "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
                     "currency": currency,  //CURRENCY CODE
-                    "orderId": date.now(),  //UNIQUE ORDER ID OR RECEIPT ID
+                    "orderId": now,  //UNIQUE ORDER ID OR RECEIPT ID
                     "cart": {
                         "products": [{
                             "product": {
