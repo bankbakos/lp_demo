@@ -60,5 +60,19 @@ def data():
 def shop():
     return render_template("shop.html")
 
+@app.route('/sales')
+def sales():
+    return render_template("sales.html")
+
+@app.route('/kosaram')
+def kosaram():
+    return render_template("kosaram.html")
+
+@app.route('/sales/kosaram')
+def kosaramsales():
+    return render_template("kosaramsales.html")
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
