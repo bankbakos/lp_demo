@@ -8,28 +8,28 @@
     </script>
     <!-- Push viewProduct -->
     <script>
-        
+
         function viewProduct(currency, name, price) {
             var today = new Date();
-            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            var dateTime = date+' '+time;
+            var dateTime = date + ' ' + time;
             lpTag.sdes = lpTag.sdes || [];
             lpTag.sdes.push(
                 {
                     "type": "purchase",  //MANDATORY
-                    "total": 11.7,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
+                    "total": price,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
                     "currency": currency,  //CURRENCY CODE
                     "orderId": dateTime,  //UNIQUE ORDER ID OR RECEIPT ID
                     "cart": {
                         "products": [{
                             "product": {
                                 "name": name,  //PRODUCT NAME
-                                "category": "software",  //PRODUCT CATEGORY NAME
+                                "category": "Sales",  //PRODUCT CATEGORY NAME
                                 "sku": "xyz001",  //PRODUCT SKU OR UNIQUE IDENTIFIER
                                 "price": price  //SINGLE PRODUCT PRICE
                             },
-                            "quantity": 3  //QUANTITY OF THIS PRODUCT
+                            "quantity": 1  //QUANTITY OF THIS PRODUCT
                         }]
                     }
                 }
@@ -42,6 +42,42 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
 
     <style>
+        .chips-wrapper .chips-row {
+            flex-wrap: wrap !important;
+            height: auto !important
+        }
+
+        .chips-wrapper {
+            margin-left: 25px !important;
+            padding: 0 !important
+        }
+
+        .chips-row {
+            margin: 0 !important;
+            justify-content: center;
+        }
+
+        .chips-item {
+            background-color: white !important;
+            border: none !important;
+            margin: 5px 5px 0 0 !important
+        }
+
+        .chips-item:hover {
+            background-color: rgb(102, 102, 102) !important;
+            color: white !important
+        }
+
+        .lpc_message-area__timestamp_auto {
+            display: none;
+        }
+
+        .LPMcontainer {
+
+            box-shadow: 0px 4px 10px rgb(0 0 0 / 32%);
+
+        }
+
         #phones {
             width: 100%;
         }
@@ -86,7 +122,7 @@
         }
     </style>
 
-    <title>Webshop</title>
+    <title>Sales</title>
 </head>
 
 <body>
@@ -99,7 +135,8 @@
         <div id="oppo_div">
             <img src="{{url_for('static', filename='img/oppoa16.png')}}" width="85" height="200">
             <h4>Oppo A16s Dual SIM (64GB)</h4>
-            <button id="btn_see_oppo" onclick="viewProduct('HUF', 'Oppo A16s Dual SIM (64GB)', 66990)">Megnézem</button>
+            <button id="btn_see_oppo"
+                onclick="viewProduct('HUF', 'Oppo A16s Dual SIM (64GB)', 66990)">Megveszem</button>
         </div>
 
 
@@ -107,14 +144,14 @@
             <img src="{{url_for('static', filename='img/samsunga52.png')}}" width="85" height="200">
             <h4>Samsung Galaxy A52s 5G Dual SIM (128GB)</h4>
             <button id="btn_see_samsung"
-                onclick="viewProduct('HUF', 'Samsung Galaxy A52s 5G Dual SIM (128GB)', 148890)">Megnézem</button>
+                onclick="viewProduct('HUF', 'Samsung Galaxy A52s 5G Dual SIM (128GB)', 148890)">Megveszem</button>
         </div>
 
         <div id="apple_div" align="center">
             <img src="{{url_for('static', filename='img/iphone.png')}}" width="120" height="200">
             <h4>Apple iPhone 13 pró (1TB)</h4>
             <button id="btn_see_apple"
-                onclick="viewProduct('HUF', 'Apple iPhone 13 pró (1TB)', 500000)">Megnézem</button>
+                onclick="viewProduct('HUF', 'Apple iPhone 13 pró (1TB)', 500000)">Megveszem</button>
         </div>
 
         <p id="chosen_product_data"></p>
