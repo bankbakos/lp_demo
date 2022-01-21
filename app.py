@@ -72,6 +72,12 @@ def kosaram():
 def kosaramsales():
     return render_template("kosaramsales.html")
 
+@app.route('/vhub')
+def vhub():
+    return render_template("vhub.html")
+
+
+
 
 
 if __name__ == '__main__':

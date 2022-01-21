@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- BEGIN LivePerson Monitor. -->
+    <script type="text/javascript">window.lpTag = window.lpTag || {}, 'undefined' == typeof window.lpTag._tagCount ? (window.lpTag = { wl: lpTag.wl || null, scp: lpTag.scp || null, site: '46597900' || '', section: lpTag.section || '', tagletSection: lpTag.tagletSection || null, autoStart: lpTag.autoStart !== !1, ovr: lpTag.ovr || {}, _v: '1.10.0', _tagCount: 1, protocol: 'https:', events: { bind: function (t, e, i) { lpTag.defer(function () { lpTag.events.bind(t, e, i) }, 0) }, trigger: function (t, e, i) { lpTag.defer(function () { lpTag.events.trigger(t, e, i) }, 1) } }, defer: function (t, e) { 0 === e ? (this._defB = this._defB || [], this._defB.push(t)) : 1 === e ? (this._defT = this._defT || [], this._defT.push(t)) : (this._defL = this._defL || [], this._defL.push(t)) }, load: function (t, e, i) { var n = this; setTimeout(function () { n._load(t, e, i) }, 0) }, _load: function (t, e, i) { var n = t; t || (n = this.protocol + '//' + (this.ovr && this.ovr.domain ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site); var o = document.createElement('script'); o.setAttribute('charset', e ? e : 'UTF-8'), i && o.setAttribute('id', i), o.setAttribute('src', n), document.getElementsByTagName('head').item(0).appendChild(o) }, init: function () { this._timing = this._timing || {}, this._timing.start = (new Date).getTime(); var t = this; window.attachEvent ? window.attachEvent('onload', function () { t._domReady('domReady') }) : (window.addEventListener('DOMContentLoaded', function () { t._domReady('contReady') }, !1), window.addEventListener('load', function () { t._domReady('domReady') }, !1)), 'undefined' === typeof window._lptStop && this.load() }, start: function () { this.autoStart = !0 }, _domReady: function (t) { this.isDom || (this.isDom = !0, this.events.trigger('LPT', 'DOM_READY', { t: t })), this._timing[t] = (new Date).getTime() }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], hooks: lpTag.hooks || [], identities: lpTag.identities || [], ev: lpTag.ev || [] }, lpTag.init()) : window.lpTag._tagCount += 1;
+
+    </script>
+    <!-- Push viewProduct -->
+    <script>
+
+        function viewProduct(currency, name, price) {
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
+            lpTag.sdes = lpTag.sdes || [];
+            lpTag.sdes.push(
+                {
+                    "type": "purchase",  //MANDATORY
+                    "total": price,  //TOTAL VALUE OF THE TRANSACTION AFTER DISCOUNT
+                    "currency": currency,  //CURRENCY CODE
+                    "orderId": dateTime,  //UNIQUE ORDER ID OR RECEIPT ID
+                    "cart": {
+                        "products": [{
+                            "product": {
+                                "name": name,  //PRODUCT NAME
+                                "category": "Kosaram",  //PRODUCT CATEGORY NAME
+                                "sku": "xyz001",  //PRODUCT SKU OR UNIQUE IDENTIFIER
+                                "price": price  //SINGLE PRODUCT PRICE
+                            },
+                            "quantity": 1  //QUANTITY OF THIS PRODUCT
+                        }]
+                    }
+                }
+            );
+            document.getElementById("chosen_product_data").innerText = "A kiválasztott termék adatai:\nVALUTA: " + currency + "\nNÉV: " + name + "\nÁR: " + price
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+    <style>
+        .chips-wrapper .chips-row {
+            flex-wrap: wrap !important;
+            height: auto !important
+        }
+
+        .chips-wrapper {
+            margin-left: 25px !important;
+            padding: 0 !important
+        }
+
+        .chips-row {
+            margin: 0 !important;
+            justify-content: center;
+        }
+
+        .chips-item {
+            background-color: white !important;
+            border: none !important;
+            margin: 5px 5px 0 0 !important
+        }
+
+        .chips-item:hover {
+            background-color: rgb(102, 102, 102) !important;
+            color: white !important
+        }
+
+        .lpc_message-area__timestamp_auto {
+            display: none;
+        }
+
+        .LPMcontainer {
+
+            box-shadow: 0px 4px 10px rgb(0 0 0 / 32%);
+
+        }
+
+
+        #phones {
+            width: 100%;
+        }
+
+        #oppo_div {
+            width: 33%;
+            height: 100%;
+            float: left;
+        }
+
+        #samsung_div {
+            width: 33%;
+            float: left;
+            height: 100%;
+        }
+
+        #btn_see_oppo {
+            width: 100px;
+            height: 50px;
+            background-color: crimson;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        #btn_see_samsung {
+            width: 100px;
+            height: 50px;
+            background-color: crimson;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        #btn_see_apple {
+            width: 100px;
+            height: 50px;
+            background-color: crimson;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+
+    <title>VHUB</title>
+</head>
+
+<body>
+    <img src="{{url_for('static', filename='img/voda.jpg')}}" style="width: 100%;">
+    <br>
+
+
+    <div id="phones" align="center">
+
+        <div id="oppo_div">
+            <img src="{{url_for('static', filename='img/oppoa16.png')}}" width="85" height="200">
+            <h4>Oppo A16s Dual SIM (64GB)</h4>
+            <button id="btn_see_oppo"
+                onclick="viewProduct('HUF', 'Oppo A16s Dual SIM (64GB)', 66990)">Megveszem</button>
+        </div>
+
+
+        <div id="samsung_div" align="center">
+            <img src="{{url_for('static', filename='img/samsunga52.png')}}" width="85" height="200">
+            <h4>Samsung Galaxy A52s 5G Dual SIM (128GB)</h4>
+            <button id="btn_see_samsung"
+                onclick="viewProduct('HUF', 'Samsung Galaxy A52s 5G Dual SIM (128GB)', 148890)">Megveszem</button>
+        </div>
+
+        <div id="apple_div" align="center">
+            <img src="{{url_for('static', filename='img/iphone.png')}}" width="120" height="200">
+            <h4>Apple iPhone 13 pró (1TB)</h4>
+            <button id="btn_see_apple"
+                onclick="viewProduct('HUF', 'Apple iPhone 13 pró (1TB)', 500000)">Megveszem</button>
+        </div>
+
+        <p id="chosen_product_data"></p>
+    </div>
+</body>
+
+</html>
