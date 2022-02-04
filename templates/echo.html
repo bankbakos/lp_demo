@@ -10,10 +10,10 @@
         lpTag.identities = lpTag.identities || [];
         lpTag.identities.push(identityFn);
 
-        function identityFn(callback) { callback({ iss: "https://login.microsoftonline.com/93f33571-550f-43cf-b09f-cd331338d086", acr: "loa1", sub: "laszlo.makara@dxc.com" }); }
+        function identityFn(callback) { callback({ iss: "https://login.microsoftonline.com/93f33571-550f-43cf-b09f-cd331338d086/v2.0", acr: "loa1", sub: "laszlo.makara@dxc.com" }); }
         function lpGetAuthenticationToken(callback) {
 
-            callback("", "FASZ");
+            callback("", "FASZAFASZ");
 
         }
 
