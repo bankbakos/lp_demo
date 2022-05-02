@@ -76,6 +76,10 @@ def kosaramsales():
 def vhub():
     return render_template("vhub.html")
 
+@app.route('/mobil')
+def mobil():
+    return render_template("mobil_payment.html")
+
 
 
 
