@@ -80,6 +80,10 @@ def vhub():
 def mobil():
     return render_template("mobil_payment.html")
 
+@app.route('/fixbilling')
+def fixbilling():
+    return render_template("fixbilling.html")
+
 
 
 
