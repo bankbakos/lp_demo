@@ -85,6 +85,9 @@ def fixbilling():
     return render_template("fixbilling.html")
 
 
+@app.route('/tobigtp')
+def tobigtp():
+    return render_template("tobigtp.html")
 
 
 
