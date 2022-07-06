@@ -89,6 +89,10 @@ def fixbilling():
 def tobigtp():
     return render_template("tobigtp.html")
 
+@app.route('/persinfo')
+def persinfo():
+    return render_template("persinfo.html")
+
 
 
 if __name__ == '__main__':
