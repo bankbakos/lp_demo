@@ -1,0 +1,148 @@
+<script type="text/javascript" src="https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem/SiteAssets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
+<!-- BEGIN LivePerson Monitor. -->
+<script type="text/javascript">
+    window.lpTag = window.lpTag || {}, 'undefined' == typeof window.lpTag._tagCount ? (window.lpTag = {
+        wl: lpTag.wl || null,
+        scp: lpTag.scp || null,
+        site: '46597900' || '',
+        section: lpTag.section || '',
+        tagletSection: lpTag.tagletSection || null,
+        autoStart: lpTag.autoStart !== !1,
+        ovr: lpTag.ovr || {},
+        _v: '1.10.0',
+        _tagCount: 1,
+        protocol: 'https:',
+        events: {
+            bind: function(t, e, i) {
+                lpTag.defer(function() {
+                    lpTag.events.bind(t, e, i)
+                }, 0)
+            },
+            trigger: function(t, e, i) {
+                lpTag.defer(function() {
+                    lpTag.events.trigger(t, e, i)
+                }, 1)
+            }
+        },
+        defer: function(t, e) {
+            0 === e ? (this._defB = this._defB || [], this._defB.push(t)) : 1 === e ? (this._defT = this._defT || [], this._defT.push(t)) : (this._defL = this._defL || [], this._defL.push(t))
+        },
+        load: function(t, e, i) {
+            var n = this;
+            setTimeout(function() {
+                n._load(t, e, i)
+            }, 0)
+        },
+        _load: function(t, e, i) {
+            var n = t;
+            t || (n = this.protocol + '//' + (this.ovr && this.ovr.domain ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site);
+            var o = document.createElement('script');
+            o.setAttribute('charset', e ? e : 'UTF-8'), i && o.setAttribute('id', i), o.setAttribute('src', n), document.getElementsByTagName('head').item(0).appendChild(o)
+        },
+        init: function() {
+            this._timing = this._timing || {}, this._timing.start = (new Date).getTime();
+            var t = this;
+            window.attachEvent ? window.attachEvent('onload', function() {
+                t._domReady('domReady')
+            }) : (window.addEventListener('DOMContentLoaded', function() {
+                t._domReady('contReady')
+            }, !1), window.addEventListener('load', function() {
+                t._domReady('domReady')
+            }, !1)), 'undefined' === typeof window._lptStop && this.load()
+        },
+        start: function() {
+            this.autoStart = !0
+        },
+        _domReady: function(t) {
+            this.isDom || (this.isDom = !0, this.events.trigger('LPT', 'DOM_READY', {
+                t: t
+            })), this._timing[t] = (new Date).getTime()
+        },
+        vars: lpTag.vars || [],
+        dbs: lpTag.dbs || [],
+        ctn: lpTag.ctn || [],
+        sdes: lpTag.sdes || [],
+        hooks: lpTag.hooks || [],
+        identities: lpTag.identities || [],
+        ev: lpTag.ev || []
+    }, lpTag.init()) : window.lpTag._tagCount += 1;
+</script>
+<!-- END LivePerson Monitor. -->
+<script type="text/javascript">
+    // Initialize the lpTag namespace and the identity array, if the identity function is placed above the tag.
+    window.lpTag = window.lpTag || {};
+    lpTag.identities = lpTag.identities || [];
+    lpTag.identities.push(identityFn);
+    lpTag.identities.push(lpGetAuthenticationToken);
+    async function identityFn(callback) {
+        console.log("Identityfn");
+        var user_info;
+        var email_from_ajax;
+        var name_from_ajax;
+        await $.ajax({
+            url: "https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem/_api/SP.UserProfiles.PeopleManager/GetMyProperties?$select=Email, DisplayName, UserProfileProperties",
+            method: "GET",
+            headers: {
+                "accept": "application/json;odata=verbose"
+            },
+            success: function(data) {
+                var result = data.d;
+                email_from_ajax = result.Email;
+                name_from_ajax = result.DisplayName;
+                let mapped_result = {}
+                    //console.log(result.UserProfileProperties.results);
+                result.UserProfileProperties.results.filter(result =>
+                    result.Key === 'FirstName' ||
+                    result.Key === 'LastName' ||
+                    result.Key === 'CellPhone' ||
+                    result.Key === 'Title' ||
+                    result.Key === 'Department').forEach(result => {
+                    mapped_result[result.Key] = result.Value
+                })
+                user_info = `{"Email":"` + email_from_ajax +
+                    `", "Name": "` + name_from_ajax +
+                    `", "FirstName": "` + mapped_result['FirstName'] +
+                    `", "LastName": "` + mapped_result['LastName'] +
+                    `", "CellPhone": "` + mapped_result['CellPhone'] +
+                    `", "Title": "` + mapped_result['Title'] +
+                    `", "Department": "` + mapped_result['Department'] + `"}`;
+                //console.log(user_info);
+            },
+            error: function(err) {
+                alert(JSON.stringify(err));
+            }
+        });
+        console.log(user_info);
+        callback({
+            iss: "https://login.microsoftonline.com/68283f3b-8487-4c86-adb3-a5228f18b893/oauth2/v2.0/",
+            acr: "loa1",
+            sub: user_info["Name"]
+        });
+    }
+    async function lpGetAuthenticationToken(callback) {
+        console.log("lpgetauthentication");
+        var url = "https://login.microsoftonline.com/68283f3b-8487-4c86-adb3-a5228f18b893/oauth2/v2.0/authorize?prompt=none&scope=openid&client_id=d35ebaab-e3e3-4929-a74d-e75fbee37526&response_mode=query&response_type=code&redirect_uri=https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem";
+        var xhr = new XMLHttpRequest();
+        var auth_code;
+        xhr.open("GET", url, false);
+        //xhr.setRequestHeader("Accept", "application/json");
+        //xhr.setRequestHeader("Authorization", "Basic ODBjNjRmZWYtY2M3Ni00NGM1LWFhZTMtNjQ2ZmI2YmE0OTBkOmM3UXFIWjRGeXl5UDlRU1hOZmxaM2UxbFNYa0RVMWN4YlUzRmsxZ2ttZ2sxTExTeHNsUFVvdkZWZEdHVFdtYTM=");
+        //xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                console.log(xhr);
+                console.log(xhr.responseURL.split("?")[1].split("&")[0].replace("cas=", ""));
+                auth_code = xhr.responseURL.split("?")[1].split("&")[0].replace("cas=", "");
+            }
+        };
+        xhr.send();
+        console.log(auth_code);
+        callback(auth_code);
+        // On Success
+        /*if (id_token) {
+            callback(id_token);
+        }// On Failure
+        callback({}, "error reason");*/
+    }
+</script>

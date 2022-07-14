@@ -93,6 +93,10 @@ def tobigtp():
 def persinfo():
     return render_template("persinfo.html")
 
+@app.route('/screenshare')
+def screenshare():
+    return render_template("screenshare.html")
+
 
 
 if __name__ == '__main__':

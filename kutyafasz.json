@@ -1,0 +1,1066 @@
+[
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "UserProfile_GUID",
+        "Value": "ed9e57b5-a6b5-42c6-adf3-dbc8fe37aca0",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SID",
+        "Value": "i:0h.f|membership|100320010ef33ed5@live.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "ADGuid",
+        "Value": "System.Byte[]",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "AccountName",
+        "Value": "i:0#.f|membership|laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "FirstName",
+        "Value": "László",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PhoneticFirstName",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "LastName",
+        "Value": "Makara",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PhoneticLastName",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PhoneticDisplayName",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Title",
+        "Value": "consultant",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "WorkPhone",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Department",
+        "Value": "Application Operations",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PersonalSpace",
+        "Value": "/personal/laszlo_makara_vodafone_com/",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PictureURL",
+        "Value": "https://vodafone-my.sharepoint.com:443/User%20Photos/Profile%20Pictures/laszlo_makara_vodafone_com_MThumb.jpg",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "UserName",
+        "Value": "laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "QuickLinks",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "WebSite",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PublicSiteRedirect",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-JobTitle",
+        "Value": "Consultant",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-DataSource",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-MemberOf",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Dotted-line",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Peers",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Responsibility",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-SipAddress",
+        "Value": "laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-MySiteUpgrade",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-DontSuggestList",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ProxyAddresses",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-HireDate",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-DisplayOrder",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ClaimID",
+        "Value": "laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ClaimProviderID",
+        "Value": "membership",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-LastColleagueAdded",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-OWAUrl",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ResourceSID",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-UserPrincipalName",
+        "Value": "laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-O15FirstRunExperience",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteInstantiationState",
+        "Value": "2",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-DistinguishedName",
+        "Value": "CN=bf5383c2-dedc-4bab-ac43-048d0fa91e7c,OU=68283f3b-8487-4c86-adb3-a5228f18b893,OU=Tenants,OU=MSOnline,DC=SPODS187329,DC=msft,DC=net",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ResourceAccountName",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-MasterAccountName",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-SourceObjectDN",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-LastKeywordAdded",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ClaimProviderType",
+        "Value": "Forms",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-SavedAccountName",
+        "Value": "i:0#.f|membership|laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-SavedSID",
+        "Value": "System.Byte[]",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ObjectExists",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteCapabilities",
+        "Value": "4",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteFirstCreationTime",
+        "Value": "2021. 01. 25. 9:34:16",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteLastCreationTime",
+        "Value": "2021. 06. 23. 11:37:56",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteNumberOfRetries",
+        "Value": "158",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PersonalSiteFirstCreationError",
+        "Value": "Does not have the capabilites or license to create a personal site - UnauthorizedAccessException",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-FeedIdentifier",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PreferredName",
+        "Value": "Makara, László, Vodafone (External)",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "WorkEmail",
+        "Value": "laszlo.makara@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "CellPhone",
+        "Value": "+36709428219",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Department",
+        "Value": "Application Operations",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Manager",
+        "Value": "i:0#.f|membership|csaba.marik@vodafone.com",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "AboutMe",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Fax",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Office",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Location",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "HomePhone",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "Assistant",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-School",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PastProjects",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Skills",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Birthday",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-StatusNotes",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-INTERNALUSER",
+        "Value": "False",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Interests",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-EmailOptin",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-HashTags",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PrivacyPeople",
+        "Value": "True",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PrivacyActivity",
+        "Value": "4095",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PictureTimestamp",
+        "Value": "63750377588",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PicturePlaceholderState",
+        "Value": "1",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PictureExchangeSyncState",
+        "Value": "1",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ContentLanguages",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-MUILanguages",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-TimeZone",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-RegionalSettings-FollowWeb",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Locale",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-CalendarType",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-AltCalendarType",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-AdjustHijriDays",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-ShowWeeks",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-WorkDays",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-WorkDayStartHour",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-WorkDayEndHour",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-Time24",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-FirstDayOfWeek",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-FirstWeekOfYear",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-RegionalSettings-Initialized",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "OfficeGraphEnabled",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-UserType",
+        "Value": "0",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-HideFromAddressLists",
+        "Value": "False",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-RecipientTypeDetails",
+        "Value": "2147483648",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "DelveFlags",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PulseMRUPeople",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "msOnline-ObjectId",
+        "Value": "bf5383c2-dedc-4bab-ac43-048d0fa91e7c",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-PointPublishingUrl",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-RefreshToken",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-TenantInstanceId",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-LPServerCacheTimeStamp",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-MultiGeoFlags",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "PreferredDataLocation",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-OPCOID",
+        "Value": "11",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "SPS-SharePointHomeExperienceState",
+        "Value": "17304585",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-LPLOCALMARKET",
+        "Value": "Hungary",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-BUSINESSFUNCTION",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-PHYSICALLOCATION",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-NICKNAME",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-VUPRIMARYACADEMY",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-VUSECONDARYACADEMY",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-VULEADERSHIP",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-EMPLOYEEID",
+        "Value": "52073111",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-VUSKILLPREFERENCE",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VF-VUCONTENTPREFERENCE",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-FUNCTION",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-FUNCTION-UAT",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-CAREERGROUP",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-CAREERGROUP-UAT",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-LEARNERPREFERENCE",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-LEARNERPREFERENCE-UAT",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-PREFERREDSKILLS",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-PREFERREDSKILLS-UAT",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "LPEVO-Market",
+        "Value": "Hungary",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "LPEVO-Function",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "LPEVO-Language",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "LPEVO-IsManager",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFU-SITETOUR",
+        "Value": "",
+        "ValueType": "Edm.String"
+    },
+    {
+        "__metadata": {
+            "type": "SP.KeyValue"
+        },
+        "Key": "VFUOptOutTracking",
+        "Value": "",
+        "ValueType": "Edm.String"
+    }
+]
