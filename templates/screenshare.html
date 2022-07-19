@@ -36,6 +36,28 @@
                     }
                 }
             );
+            lpTag.sdes.push(
+                {
+                    "type": "personal",  //MANDATORY
+                    "personal": {
+                        "firstname": "bank",  // FIRST NAME
+                        "lastname": "bakos",  // SURNAME
+                        "contacts": [{
+                            "email": "bank.bakos@day.hu",  // EMAIL
+                            "phone": "121231123",  // PHONE NUMBER
+                            "preferred": "EMAIL",  // EMAIL, PHONE
+                        }]
+                    }
+                }
+            );
+            lpTag.sdes.push(
+                {
+                    "type": "ctmrinfo",  //MANDATORY
+                    "info": {
+                        "role": "asd",  //CONSUMER ROLE TITLE
+                        "storeNumber": "asd"
+                    }
+                });
             document.getElementById("chosen_product_data").innerText = "A kiválasztott termék adatai:\nVALUTA: " + currency + "\nNÉV: " + name + "\nÁR: " + price
         }
     </script>
