@@ -30,24 +30,28 @@ color: white !important
 .lp_agent_is_typing {
     display: none !important;
 }
-
+.buttonAuth {background-color: #008CBA; } 
+.buttonNoAuth {background-color: #f44336;} 
     </style>
 
 </head>
 
 <body>
-<div id="apple_div" align="center">
-<img src="{{url_for('static', filename='img/iphon.png')}}" width="120" height="200">
-<h4>AUTH</h4>
-<button id="btn_see_apple"
-onclick="test()">Auth</button>
+<div>
+<button class="button button2" onclick="testNoAuth()">NoAuth</button>
+<button class="button button3" onclick="testAuth()">Auth</button>
 </div>
 </body>
 </html>
 
 <script>
-        function test() {
+        function testAuth() {
         localStorage.setItem('isLoggedIn', 'true')
+        location.reload();
+
+        }
+        function testNoAuth() {
+        localStorage.setItem('isLoggedIn', 'false')
         location.reload();
 
         }
