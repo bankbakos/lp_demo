@@ -81,7 +81,8 @@ color: white !important
         console.log("lpGetAuthenticationToken");
         const faas_api = "https://e34189b0.eu-gb.apigw.appdomain.cloud/liveperson-auth/action";
 
-        const user_info = `{"Email":"vue.testuser@vodafone.com", "Name": "Test User", "FirstName": "Test", "LastName": "User", "CellPhone": "+36701234567", "Title": "` + window.location.href + `", "Department": ""}`;
+      const random = Math.floor((Math.random() * 100) + 1);
+        const user_info = `{"Email":"vue.testuser` + random + `@vodafone.com", "Name": "Test User", "FirstName": "Test", "LastName": "User", "CellPhone": "+36701234567", "Title": "` + window.location.href + `", "Department": ""}`;
 
         const xhr_sp_api = new XMLHttpRequest();
         let id_token = "";
