@@ -56,3 +56,82 @@ lpTag.section = ["noauth", "stepup"];
 
 </script>
 <!-- END LivePerson Monitor. -->
+    <div id="apple_div" align="center">
+
+            <img src="{{url_for('static', filename='img/iphone.png')}}" width="120" height="200">
+
+            <h4>Apple iPhone 13 pró (1TB)</h4>
+
+            <button id="btn_see_apple"
+
+                onclick="test()">Megveszem</button>
+
+        </div>
+
+<script>
+    function test() {
+      // Initialize the lpTag namespace and the identity array, if the identity function is placed above the tag.
+    window.lpTag = window.lpTag || {};
+    lpTag.identities = lpTag.identities || [];
+lpTag.section = ["auth", "stepup"];
+    lpTag.identities.push(identityFn);
+
+    async function identityFn(callback) {
+        console.log("identityfunction");
+        const faas_api = "https://e34189b0.eu-gb.apigw.appdomain.cloud/liveperson-auth/action";
+
+        const user_info = `{"Email":"vue.testuser@vodafone.com", "Name": "Test User", "FirstName": "Test", "LastName": "User", "CellPhone": "+36701234567", "Title": "` + window.location.href +`", "Department": ""}`;
+
+        const xhr_sp_api = new XMLHttpRequest();
+        let iss_from_token = "";
+        let sub_from_token = "";
+
+        xhr_sp_api.open("POST", faas_api, false);
+
+        xhr_sp_api.setRequestHeader("Accept", "application/json");
+        xhr_sp_api.setRequestHeader("Content-Type", "application/json");
+
+        xhr_sp_api.onreadystatechange = function () {
+            if (xhr_sp_api.readyState === 4) {
+                iss_from_token = JSON.parse(xhr_sp_api.response).iss;
+                sub_from_token = JSON.parse(xhr_sp_api.response).sub;
+                console.log(iss_from_token);
+                console.log(sub_from_token);
+            }
+        };
+        xhr_sp_api.send(user_info)
+        console.log(iss_from_token)
+        console.log(sub_from_token)
+        callback({
+            iss: iss_from_token,
+            acr: "loa1",
+            sub: sub_from_token
+        });
+    }
+
+    async function lpGetAuthenticationToken(callback) {
+        console.log("lpGetAuthenticationToken");
+        const faas_api = "https://e34189b0.eu-gb.apigw.appdomain.cloud/liveperson-auth/action";
+
+        const user_info = `{"Email":"vue.testuser@vodafone.com", "Name": "Test User", "FirstName": "Test", "LastName": "User", "CellPhone": "+36701234567", "Title": "` + window.location.href +`", "Department": ""}`;
+
+        const xhr_sp_api = new XMLHttpRequest();
+        let id_token = "";
+
+        xhr_sp_api.open("POST", faas_api, false);
+
+        xhr_sp_api.setRequestHeader("Accept", "application/json");
+        xhr_sp_api.setRequestHeader("Content-Type", "application/json");
+
+        xhr_sp_api.onreadystatechange = function () {
+            if (xhr_sp_api.readyState === 4) {
+                id_token = JSON.parse(xhr_sp_api.response).message;
+                console.log(id_token);
+            }
+        };
+
+        xhr_sp_api.send(user_info);
+        callback(id_token);
+    }
+    }
+<script>    
