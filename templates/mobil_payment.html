@@ -73,7 +73,7 @@ function test() {
       // Initialize the lpTag namespace and the identity array, if the identity function is placed above the tag.
     window.lpTag = window.lpTag || {};
     lpTag.identities = lpTag.identities || [];
-lpTag.section = ["auth", "stepup"];
+lpTag.section = ["noauth", "stepup"];
     lpTag.identities.push(identityFn);
 
     async function identityFn(callback) {
