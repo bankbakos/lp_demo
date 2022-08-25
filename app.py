@@ -90,7 +90,7 @@ def tobigtp():
     return render_template("tobigtp.html")
 
 @app.route('/tobigtp2')
-def tobigtp():
+def tobigtp2():
     return render_template("tobigtp2.html")
 
 @app.route('/persinfo')
