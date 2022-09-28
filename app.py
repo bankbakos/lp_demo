@@ -97,6 +97,10 @@ def tobigtp2():
 def persinfo():
     return render_template("persinfo.html")
 
+@app.route('/persinfo_prog')
+def persinfo():
+    return render_template("persinfo_prod.html")
+
 @app.route('/screenshare')
 def screenshare():
     return render_template("screenshare.html")
