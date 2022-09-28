@@ -105,7 +105,9 @@ def persinfoprod():
 def screenshare():
     return render_template("screenshare.html")
 
-
+@app.route('/vfh_virtus')
+def vfh_virtus():
+    return render_template("vfh_virtus.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
