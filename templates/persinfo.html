@@ -52,11 +52,11 @@
                 {
                     "type": "personal",  //MANDATORY
                     "personal": {
-                        "firstname": user_info['FirstName'],  // FIRST NAME
-                        "lastname": user_info['LastName'],  // SURNAME
+                        "firstname": "Test",  // FIRST NAME
+                        "lastname": "User",  // SURNAME
                         "contacts": [{
-                            "email": user_info['Email'],  // EMAIL
-                            "phone": user_info['CellPhone'],  // PHONE NUMBER
+                            "email": "a@b.com",  // EMAIL
+                            "phone": "+361234567",  // PHONE NUMBER
                             "preferred": "EMAIL",  // EMAIL, PHONE
                         }]
                     }
@@ -66,8 +66,8 @@
                 {
                     "type": "ctmrinfo",  //MANDATORY
                     "info": {
-                        "role": user_info["Title"],  //CONSUMER ROLE TITLE
-                        "storeNumber": user_info["Department"]
+                        "role": "devtest",  //CONSUMER ROLE TITLE
+                        "storeNumber": "devtest"
                     }
                 }
             );
