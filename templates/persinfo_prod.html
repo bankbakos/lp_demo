@@ -10,44 +10,40 @@
     <!-- Push viewProduct -->
     <script>
 
-        async function viewProduct() {
-            lpTag.sdes = lpTag.sdes || [];
-            var user_info;
-            var email_from_ajax;
-            var name_from_ajax;
-            await $.ajax({
-                url: "https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem/_api/SP.UserProfiles.PeopleManager/GetMyProperties?$select=Email, DisplayName, UserProfileProperties",
-                method: "GET",
-                headers: {
-                    "accept": "application/json;odata=verbose"
-                },
-                success: function (data) {
-                    var result = data.d;
-                    email_from_ajax = result.Email;
-                    name_from_ajax = result.DisplayName;
-                    let mapped_result = {}
-                    //console.log(result.UserProfileProperties.results);
-                    result.UserProfileProperties.results.filter(result =>
-                        result.Key === 'FirstName' ||
-                        result.Key === 'LastName' ||
-                        result.Key === 'CellPhone' ||
-                        result.Key === 'Title' ||
-                        result.Key === 'Department').forEach(result => {
-                            mapped_result[result.Key] = result.Value
-                        })
-                    user_info = `{"Email":"` + email_from_ajax +
-                        `", "Name": "` + name_from_ajax +
-                        `", "FirstName": "` + mapped_result['FirstName'] +
-                        `", "LastName": "` + mapped_result['LastName'] +
-                        `", "CellPhone": "` + mapped_result['CellPhone'] +
-                        `", "Title": "` + mapped_result['Title'] +
-                        `", "Department": "` + mapped_result['Department'] + `"}`;
-                    console.log(user_info);
-                },
-                error: function (err) {
-                    alert(JSON.stringify(err));
-                }
-            })
+    async function viewProduct() {
+    lpTag.sdes = lpTag.sdes || [];
+    var user_info;
+    var email_from_ajax;
+    var name_from_ajax;
+    /*await $.ajax({
+        url: "https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem/_api/SP.UserProfiles.PeopleManager/GetMyProperties?$select=Email, DisplayName, UserProfileProperties",
+        method: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        },
+        success: function(data) {
+            var result = data.d;
+            email_from_ajax = result.Email;
+            name_from_ajax = result.DisplayName;
+            let mapped_result = {};
+            console.log(result.UserProfileProperties.results);
+            result.UserProfileProperties.results.filter(result => (result.Key === 'FirstName' || result.Key === 'LastName' || result.Key === 'CellPhone' || result.Key === 'Title' || result.Key === 'Department')).forEach(result => {
+                __WRAPPED_set(mapped_result, result.Key, '=', result.Value);
+            });
+            user_info = {
+                "Email": email_from_ajax,
+                "Name": name_from_ajax,
+                "FirstName": mapped_result['FirstName'],
+                "LastName": mapped_result['LastName'],
+                "CellPhone": mapped_result['CellPhone'],
+                "Title": mapped_result['Title'],
+                "Department": mapped_result['Department']
+            };
+        },
+        error: function(err) {
+            alert(JSON.stringify(err));
+        }
+    }); */
             lpTag.sdes.push(
                 {
                     "type": "personal",  //MANDATORY
@@ -57,7 +53,7 @@
                         "contacts": [{
                             "email": "a@b.com",  // EMAIL
                             "phone": "+361234567",  // PHONE NUMBER
-                            "preferred": "EMAIL",  // EMAIL, PHONE
+                            "preferred": "EMAIL"  // EMAIL, PHONE
                         }]
                     }
                 }
