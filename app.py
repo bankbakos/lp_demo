@@ -109,5 +109,9 @@ def screenshare():
 def vfh_virtus():
     return render_template("vfh_virtus.html")
 
+@app.route('/vfh_virtus_prod')
+def vfh_virtus_prod():
+    return render_template("vfh_virtus_prod.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
