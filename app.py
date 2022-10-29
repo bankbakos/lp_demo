@@ -89,9 +89,17 @@ def fixbilling():
 def tobigtp():
     return render_template("tobigtp.html")
 
+@app.route('/tobigtp2')
+def tobigtp2():
+    return render_template("tobigtp2.html")
+
 @app.route('/persinfo')
 def persinfo():
     return render_template("persinfo.html")
+
+@app.route('/persinfo_prod')
+def persinfoprod():
+    return render_template("persinfo_prod.html")
 
 @app.route('/screenshare')
 def screenshare():
@@ -100,7 +108,14 @@ def screenshare():
 @app.route('/mvm')
 def screenshare():
     return render_template("MVM.html")
+    
+@app.route('/vfh_virtus')
+def vfh_virtus():
+    return render_template("vfh_virtus.html")
 
+@app.route('/vfh_virtus_prod')
+def vfh_virtus_prod():
+    return render_template("vfh_virtus_prod.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
