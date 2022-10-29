@@ -106,7 +106,7 @@ def screenshare():
     return render_template("screenshare.html")
 
 @app.route('/mvm')
-def screenshare():
+def mvm():
     return render_template("MVM.html")
     
 @app.route('/vfh_virtus')
