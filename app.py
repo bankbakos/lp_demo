@@ -97,6 +97,9 @@ def persinfo():
 def screenshare():
     return render_template("screenshare.html")
 
+@app.route('/mvm')
+def screenshare():
+    return render_template("MVM.html")
 
 
 if __name__ == '__main__':
