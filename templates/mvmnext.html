@@ -31,6 +31,163 @@ color: white !important
 }
 
     </style>
+<header class="navbar navbar-default navbar-fixed-top hidden-xs">
+            
+
+            <div id="header-1">
+                <div class="row header-container">
+                    
+            <nav class="info-links col-md-8 col-lg-8">
+                     <ul>
+                         <li class="first">
+                             <a href="https://www.mvmnext.hu/nyitolap" title="Főoldal">Főoldal</a>
+                         </li>
+                         <li class="hideonmobil">
+                             <a href="/foldgaz/informaciok/Elerhetosegek" title="Elérhetőségek">Elérhetőségek</a>
+                         </li>
+                         <li class="right">
+                             <a href="/foldgaz/Egyetemes-Szolgaltatas/Ugyintezes/ugyfelkapcsolat/gazszivargas-bejelentes" title="Gázszivárgás bejelentése">Gázszivárgás-bejelentés</a>
+                         </li>
+                         <li class="hideonmobil">
+                             <a href="/foldgaz/Egyetemes-Szolgaltatas/Ugyintezes/ugyfelkapcsolat/muszaki-problemak" title="Műszaki problémák">Műszaki problémák</a>
+                         </li>
+                         <li class="hideonmobil">
+                             <a href="/vallalati-informaciok/rolunk" title="Rólunk">Rólunk</a>
+                         </li>
+                     </ul>
+                 </nav>
+            
+                    <div class="col-md-4 col-lg-4 quick-search right">
+                        <div id="ctl00_QuickSearch_ctl00_quickPanel" class="sn-quicksearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_QuickSearch_ctl00_SearchButton')">
+	
+    <input name="ctl00$QuickSearch$ctl00$SearchBox" type="text" id="ctl00_QuickSearch_ctl00_SearchBox" class="quick-search-text form-control ui-autocomplete-input" autocomplete="off" placeholder="keresés (legalább 3 karakter)">    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+    <input type="button" name="ctl00$QuickSearch$ctl00$SearchButton" value="" onclick="javascript:__doPostBack('ctl00$QuickSearch$ctl00$SearchButton','')" id="ctl00_QuickSearch_ctl00_SearchButton" class="quick-search-btn right" disabled="disabled">
+    <span id="search-close"></span>
+
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $("input[id*='_SearchBox']").val("");
+        var termTemplate = "<span class='ui-autocomplete-term'>%s</span>";
+        $('.quick-search-text').autocomplete({
+            source: "/AutoComplete.mvc/Find?source=x&top=5",
+            minLength: 2,
+            messages: {
+                noResults: '',
+                results: function() {}
+            },
+            select: function (a, b) {
+                $(this).val(b.item.value);
+                $(".quick-search-btn").click()
+            },
+            open: function (e, ui) {
+                var
+                acData = $(this).data('uiAutocomplete'),
+                styledTerm = termTemplate.replace('%s', acData.term);
+
+                acData
+                .menu
+                .element
+                .find('a')
+                .each(function () {
+                    var me = $(this);
+                    me.html(me.text().replace(acData.term, styledTerm));
+                });
+            }
+        });
+
+        $('.quick-search-text').keyup(function () {
+            CheckSearchLength();
+        });
+        CheckSearchLength();
+
+        function CheckSearchLength() {
+            $(".quick-search-btn").attr('disabled', $('.quick-search-text').val().length < 3);
+        }
+
+    });
+</script>
+                    </div>
+                </div>
+            </div>
+            <div id="header-2" class="row header-container">
+                <a href="/foldgaz" title=" Page2016hu-HULogoTextIndex
+                    " class="logo left col-lg-3 col-md-3">
+                    <div id="logo"></div>
+                </a>
+                <nav role="navigation" class="col-lg-6 col-md-6">
+                    <div id="ctl00_MainMenu" cacheable="True" cacheablefor="Everyone" cachebycontext="True" cachebypath="False" cachebyparams="False" cachebylanguage="False">
+	
+          <ul class="nav navbar-nav main-nav">
+            <!--<li><a href="/foldgaz/Egyetemes-Szolgaltatas/Ajanlataink" title="">Ajánlataink</a>
+            </li>-->
+            <!--<li><a href="/foldgaz/Egyetemes-Szolgaltatas/Ugyintezes" title="">Ügyintézés</a>
+            </li> -->
+            <li><a href="/foldgaz/Egyetemes-Szolgaltatas/Ugyintezes" title="">Gázügyek</a>
+            </li>
+            <li><a href="https://gyik.mvmnext.hu" target="_blank" title="">Gyakori kérdések</a>
+            </li>
+            <li><a href="/foldgaz/Egyetemes-Szolgaltatas/Ajanlataink" title="">Ajánlatok</a>
+            </li>
+        </ul>
+          
+</div>
+                </nav>
+                <div class="col-lg-3 col-md-3 col-sm-4 right loginportlet loginhovered">
+                    <div id="ctl00_fogazmainloginportlet">
+	
+
+<div class="fogaz-small-login">
+
+    
+
+    <div class="fogaz-small-loginheader omni-small-loginheader">
+        <h2>Online ügyintézés</h2>
+        <span class="hamburger-menu-ou"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+    </div>
+    <div class="fogaz_loginbox-container omni-loginbox" style="display: none;">
+        <div class="omni-loginbox-textcontainer">
+                        
+              <p>
+                  <strong>Regisztrált már az új online ügyfélszolgálatra?
+                  </strong>
+              </p>
+                            <p>Próbálja ki új, könnyen használható online felületünket az Ön számára legfontosabb ügyek intézéséhez! </p>
+              <p>Lakossági ügyfélként regisztráljon még ma! A korábbi online ügyfélszolgálatok és mobilappok hamarosan megszűnnek. </p>
+<!--<p>Regisztrációt követően, a korábbi helyett már az új online ügyintézési felületünket tudja majd használni.</p>
+              <p>Korábbi online ügyfélszolgálatunk ezen a <a href="/foldgaz/ugyfelszolgalat">linken</a> érhető el.</p>-->
+              <p><a href="https://onlineugyintezes.mvmnext.hu">Lakossági ügyfél</a></p>
+              <p><a href="https://mvmnext.hu/foldgaz/ugyfelszolgalat" target="_blank">Nem lakossági ügyfél</a>
+                </p>
+          
+        </div>
+        <div id="fogaz-smallloginboxform" class="omni-loginboxform">
+            <div class="loginbox-button no-margin omni-loginbox-button">
+                <a class="btn btn-default omni-loginbutton" href="https://onlineugyintezes.mvmnext.hu" target="_blank" name="submit">
+                    BELÉPÉS
+                    <span class="inactivespinner"><i class="fa fa-spinner"></i></span>
+                </a>
+            </div>
+            <div class="loginbox-bottomcontainer">
+                <a class="loginbox-omni-linkbutton" id="omni-loginbox-registerbutton" target="_blank" href="https://onlineugyintezes.mvmnext.hu">
+                    
+                    <i class="fa fa-user-plus"></i>
+                    <span>REGISZTRÁLJON MOST!</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+</div>
+                </div>
+            </div>
+        </header>
 <head>
     <!-- BEGIN LivePerson Monitor. -->
     <script type="text/javascript">window.lpTag = window.lpTag || {}, 'undefined' == typeof window.lpTag._tagCount ? (window.lpTag = { wl: lpTag.wl || null, scp: lpTag.scp || null, site: '46597900' || '', section: lpTag.section || '', tagletSection: lpTag.tagletSection || null, autoStart: lpTag.autoStart !== !1, ovr: lpTag.ovr || {}, _v: '1.10.0', _tagCount: 1, protocol: 'https:', events: { bind: function (t, e, i) { lpTag.defer(function () { lpTag.events.bind(t, e, i) }, 0) }, trigger: function (t, e, i) { lpTag.defer(function () { lpTag.events.trigger(t, e, i) }, 1) } }, defer: function (t, e) { 0 === e ? (this._defB = this._defB || [], this._defB.push(t)) : 1 === e ? (this._defT = this._defT || [], this._defT.push(t)) : (this._defL = this._defL || [], this._defL.push(t)) }, load: function (t, e, i) { var n = this; setTimeout(function () { n._load(t, e, i) }, 0) }, _load: function (t, e, i) { var n = t; t || (n = this.protocol + '//' + (this.ovr && this.ovr.domain ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site); var o = document.createElement('script'); o.setAttribute('charset', e ? e : 'UTF-8'), i && o.setAttribute('id', i), o.setAttribute('src', n), document.getElementsByTagName('head').item(0).appendChild(o) }, init: function () { this._timing = this._timing || {}, this._timing.start = (new Date).getTime(); var t = this; window.attachEvent ? window.attachEvent('onload', function () { t._domReady('domReady') }) : (window.addEventListener('DOMContentLoaded', function () { t._domReady('contReady') }, !1), window.addEventListener('load', function () { t._domReady('domReady') }, !1)), 'undefined' === typeof window._lptStop && this.load() }, start: function () { this.autoStart = !0 }, _domReady: function (t) { this.isDom || (this.isDom = !0, this.events.trigger('LPT', 'DOM_READY', { t: t })), this._timing[t] = (new Date).getTime() }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], hooks: lpTag.hooks || [], identities: lpTag.identities || [], ev: lpTag.ev || [] }, lpTag.init()) : window.lpTag._tagCount += 1;
