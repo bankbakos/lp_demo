@@ -1,0 +1,96 @@
+<script type="text/javascript"
+        src="https://vodafone.sharepoint.com/sites/KnowledgeManagementSystem/SiteAssets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
+
+
+<style>
+    .chips-wrapper .chips-row {
+        flex-wrap: wrap !important;
+        height: auto !important
+    }
+    .chips-wrapper {
+        margin-left: 25px !important;
+        padding: 0 !important
+    }
+    .chips-row {
+        margin: 0 !important;
+        justify-content: center;
+    }
+    .chips-item {
+        background-color: #008480 !important;
+        border: none !important;
+        margin: 5px 5px 0 0 !important;
+        color: black !important;
+    }
+    .chips-item:hover {
+        background-color: #006561 !important;
+        color: white !important
+    }
+    .lpc_message-area__timestamp_auto {
+        display: none;
+    }
+    .lp_agent_is_typing {
+        display: none !important;
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+/*mvm
+
+
+</style>
+<head>
+    <!-- BEGIN LivePerson Monitor. -->
+    <script type="text/javascript">window.lpTag = window.lpTag || {}, 'undefined' == typeof window.lpTag._tagCount ? (window.lpTag = { wl: lpTag.wl || null, scp: lpTag.scp || null, site: '46597900' || '', section: lpTag.section || '', tagletSection: lpTag.tagletSection || null, autoStart: lpTag.autoStart !== !1, ovr: lpTag.ovr || {}, _v: '1.10.0', _tagCount: 1, protocol: 'https:', events: { bind: function (t, e, i) { lpTag.defer(function () { lpTag.events.bind(t, e, i) }, 0) }, trigger: function (t, e, i) { lpTag.defer(function () { lpTag.events.trigger(t, e, i) }, 1) } }, defer: function (t, e) { 0 === e ? (this._defB = this._defB || [], this._defB.push(t)) : 1 === e ? (this._defT = this._defT || [], this._defT.push(t)) : (this._defL = this._defL || [], this._defL.push(t)) }, load: function (t, e, i) { var n = this; setTimeout(function () { n._load(t, e, i) }, 0) }, _load: function (t, e, i) { var n = t; t || (n = this.protocol + '//' + (this.ovr && this.ovr.domain ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site); var o = document.createElement('script'); o.setAttribute('charset', e ? e : 'UTF-8'), i && o.setAttribute('id', i), o.setAttribute('src', n), document.getElementsByTagName('head').item(0).appendChild(o) }, init: function () { this._timing = this._timing || {}, this._timing.start = (new Date).getTime(); var t = this; window.attachEvent ? window.attachEvent('onload', function () { t._domReady('domReady') }) : (window.addEventListener('DOMContentLoaded', function () { t._domReady('contReady') }, !1), window.addEventListener('load', function () { t._domReady('domReady') }, !1)), 'undefined' === typeof window._lptStop && this.load() }, start: function () { this.autoStart = !0 }, _domReady: function (t) { this.isDom || (this.isDom = !0, this.events.trigger('LPT', 'DOM_READY', { t: t })), this._timing[t] = (new Date).getTime() }, vars: lpTag.vars || [], dbs: lpTag.dbs || [], ctn: lpTag.ctn || [], sdes: lpTag.sdes || [], hooks: lpTag.hooks || [], identities: lpTag.identities || [], ev: lpTag.ev || [] }, lpTag.init()) : window.lpTag._tagCount += 1;
+
+    </script>
+    <!-- Push viewProduct -->
+    <script>
+
+        async function viewProduct() {
+            lpTag.sdes = lpTag.sdes || [];
+            var user_info;
+            var email_from_ajax;
+            var name_from_ajax;
+
+            lpTag.sdes.push(
+                {
+                    "type": "personal",  //MANDATORY
+                    "personal": {
+                        "firstname": "Peregrin",  // FIRST NAME
+                        "lastname": "Tuk",  // SURNAME
+                        "contacts": [{
+                            "email": "tukperegrin@megye.com",  // EMAIL
+                            "phone": "+361234567",  // PHONE NUMBER
+                            "preferred": "EMAIL"  // EMAIL, PHONE
+                        }]
+                    }
+                }
+            );
+            lpTag.sdes.push(
+                {
+                    "type": "ctmrinfo",  //MANDATORY
+                    "info": {
+                        "role": "Hobbit",  //CONSUMER ROLE TITLE
+                        "storeNumber": "Megye"
+                    }
+                }
+            );
+        }
+        viewProduct()
+    </script>
+
+</head>
+<body style="background-image: url('static/img/mvmnext3.png');
+       min-height: 80%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;">
+
+</body>
+
+</html>
+
+
+

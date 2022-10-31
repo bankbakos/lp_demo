@@ -115,7 +115,15 @@ def mvmnext():
 
 @app.route('/mvmnext2')
 def mvmnext2():
-    return render_template("MVMNext2.html")
+    return render_template("mvmnext2.html")
+
+@app.route('/mvmnext3')
+def mvmnext2():
+    return render_template("mvmnext3.html")
+
+@app.route('/mvmnext4')
+def mvmnext2():
+    return render_template("mvmnext4.html")
     
 @app.route('/vfh_virtus')
 def vfh_virtus():

@@ -106,50 +106,60 @@
 
             </div>
         </nav>
-        <div class="col-lg-3 col-md-3 col-sm-4 right loginportlet loginhovered">
-            <div id="ctl00_fogazmainloginportlet">
+        <div id="ctl00_fogazmainloginportlet">
 
 
-                <div class="fogaz-small-login">
+            <div class="fogaz-small-login">
 
 
 
-                    <div class="fogaz-small-loginheader omni-small-loginheader">
-                        <h2>Online ügyintézés</h2>
-                        <span class="hamburger-menu-ou"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+                <div class="fogaz-small-loginheader omni-small-loginheader">
+                    <h2>Online ügyintézés</h2>
+                    <span class="hamburger-menu-ou"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+                </div>
+                <div class="fogaz_loginbox-container omni-loginbox" style="display: none;">
+                    <div class="omni-loginbox-textcontainer" style="">
+
+                        <p>
+                            <strong>Regisztrált már az új online ügyfélszolgálatra?
+                            </strong>
+                        </p>
+                        <p>Próbálja ki új, könnyen használható online felületünket az Ön számára legfontosabb ügyek intézéséhez! </p>
+                        <p>Lakossági ügyfélként regisztráljon még ma! A korábbi online ügyfélszolgálatok és mobilappok hamarosan megszűnnek. </p>
+                        <!--<p>Regisztrációt követően, a korábbi helyett már az új online ügyintézési felületünket tudja majd használni.</p>
+                                      <p>Korábbi online ügyfélszolgálatunk ezen a <a href="/foldgaz/ugyfelszolgalat">linken</a> érhető el.</p>-->
+                        <p><a href="https://onlineugyintezes.mvmnext.hu">Lakossági ügyfél</a></p>
+                        <p><a href="https://mvmnext.hu/foldgaz/ugyfelszolgalat" target="_blank">Nem lakossági ügyfél</a>
+                        </p>
+
                     </div>
-                    <div class="fogaz_loginbox-container omni-loginbox" style="display: none;">
-                        <div class="omni-loginbox-textcontainer" style="">
-
-                            <p>
-                                <strong>Regisztrált már az új online ügyfélszolgálatra?
-                                </strong>
-                            </p>
-                            <p>Próbálja ki új, könnyen használható online felületünket az Ön számára legfontosabb ügyek intézéséhez! </p>
-                            <p>Lakossági ügyfélként regisztráljon még ma! A korábbi online ügyfélszolgálatok és mobilappok hamarosan megszűnnek. </p>
-                            <!--<p>Regisztrációt követően, a korábbi helyett már az új online ügyintézési felületünket tudja majd használni.</p>
-                                          <p>Korábbi online ügyfélszolgálatunk ezen a <a href="/foldgaz/ugyfelszolgalat">linken</a> érhető el.</p>-->
-                            <p><a href="https://onlineugyintezes.mvmnext.hu">Lakossági ügyfél</a></p>
-                            <p><a href="https://mvmnext.hu/foldgaz/ugyfelszolgalat" target="_blank">Nem lakossági ügyfél</a>
-                            </p>
-
+                    <div id="fogaz-smallloginboxform" class="omni-loginboxform">
+                        <div class="loginbox-button no-margin omni-loginbox-button">
+                            <a class="btn btn-default omni-loginbutton" href="https://onlineugyintezes.mvmnext.hu" target="_blank" name="submit">
+                                BELÉPÉS
+                                <span class="inactivespinner"><i class="fa fa-spinner"></i></span>
+                            </a>
                         </div>
-                        <div id="fogaz-smallloginboxform" class="omni-loginboxform">
-                            <div class="loginbox-button no-margin omni-loginbox-button">
-                                <a class="btn btn-default omni-loginbutton" href="https://onlineugyintezes.mvmnext.hu" target="_blank" name="submit">
-                                    BELÉPÉS
-                                    <span class="inactivespinner"><i class="fa fa-spinner"></i></span>
-                                </a>
-                            </div>
-                            <div class="loginbox-bottomcontainer">
-                                <a class="loginbox-omni-linkbutton" id="omni-loginbox-registerbutton" target="_blank" href="https://onlineugyintezes.mvmnext.hu">
+                        <div class="loginbox-bottomcontainer">
+                            <a class="loginbox-omni-linkbutton" id="omni-loginbox-registerbutton" target="_blank" href="https://onlineugyintezes.mvmnext.hu">
 
-                                    <i class="fa fa-user-plus"></i>
-                                    <span>REGISZTRÁLJON MOST!</span>
-                                </a>
-                            </div>
-
+                                <i class="fa fa-user-plus"></i>
+                                <span>REGISZTRÁLJON MOST!</span>
+                            </a>
                         </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+            </div>
+
+
+        </div>
                     </div>
 
                 </div>
@@ -17292,7 +17302,7 @@
             var user_info;
             var email_from_ajax;
             var name_from_ajax;
-
+/*
             lpTag.sdes.push(
                 {
                     "type": "personal",  //MANDATORY
@@ -17315,7 +17325,7 @@
                         "storeNumber": "Megye"
                     }
                 }
-            );
+            );*/
         }
         viewProduct()
     </script>
