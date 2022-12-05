@@ -40,16 +40,21 @@ color: white !important
 $(document).ready(function () {
     waitForPlaceholder(function () {
         changeInputPlaceholder();
+	    console.log("func1");
     });
     function changeInputPlaceholder() {
         $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder", "Kérlek, gépeld be az üzeneted!");
+    console.log("changeInputPlaceholder");
     }
     function waitForPlaceholder(callback) {
         if ($("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").length &&
             $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder") == "Gépelje be üzenetét") {
-            callback();
+            console.log("waitForPlaceholder");
+		callback();
+		
         }
         setTimeout(function () {
+		console.log("setTimeout");
             waitForPlaceholder(callback);
         }, 100);
     };
