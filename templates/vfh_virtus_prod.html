@@ -38,7 +38,23 @@ color: white !important
     </script>
     <!-- Push viewProduct -->
     <script>
-
+$(document).ready(function () {
+    waitForPlaceholder(function () {
+        changeInputPlaceholder();
+    });
+    function changeInputPlaceholder() {
+        $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder", "Kérlek, gépeld be az üzeneted!");
+    }
+    function waitForPlaceholder(callback) {
+        if ($("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").length &&
+            $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder") == "Gépelje be üzenetét") {
+            callback();
+        }
+        setTimeout(function () {
+            waitForPlaceholder(callback);
+        }, 100);
+    };
+})
   async function viewProduct() {
     lpTag.sdes = lpTag.sdes || [];
     var user_info;
