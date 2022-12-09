@@ -133,5 +133,9 @@ def vfh_virtus():
 def vfh_virtus_prod():
     return render_template("vfh_virtus_prod.html")
 
+@app.route('/mbilling')
+def mbilling():
+    return render_template("mbilling.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
