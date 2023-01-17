@@ -137,9 +137,9 @@ def vfh_virtus_prod():
 def mbilling():
     return render_template("mbilling.html")
 
-@app.route('/MNP')
-def MNP():
-    return render_template("MNP.html")
+@app.route('/mnp')
+def mnp():
+    return render_template("mnp.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
