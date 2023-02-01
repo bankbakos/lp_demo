@@ -36,34 +36,7 @@ color: white !important
     </script>
     <!-- Push viewProduct -->
     <script>
-	    let t1 = performance.now();
-$(document).ready(function () {
-    waitForPlaceholder(function () {
-        changeInputPlaceholder();
-	    console.log("func1");
-    });
-    function changeInputPlaceholder() {
-        $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder", "Kérlek, gépeld be az üzeneted!");
-    console.log("changeInputPlaceholder");
-    }
-    function waitForPlaceholder(callback) {
-        if ($("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").length &&
-            $("div.lp_bottom_area.lp_attachment_icon.lp_emoji_supported.lp_menu_top > div.lp_input_area.lpc_composer__text-area-wrapper.lpc_desktop > textarea").attr("placeholder") == "Gépelje be üzenetét") {
-            console.log("waitForPlaceholder");
-		callback();
-		
-        }
-        setTimeout(function () {
-		console.log("setTimeout");
-            waitForPlaceholder(callback);
-        }, 100);
-    };
-})
-	    let t2 = performance.now();
-let elapsed = t2 - t1; 
-// Write the elapsed time to the browser title bar.
-time = elapsed + " ms";
-console.log(time);
+	
   async function viewProduct() {
     lpTag.sdes = lpTag.sdes || [];
     var user_info;
