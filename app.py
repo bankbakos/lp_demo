@@ -137,6 +137,10 @@ def vfh_virtus_prod():
 def mbilling():
     return render_template("mbilling.html")
 
+@app.route('/roaming')
+def roaming():
+    return render_template("roaming.html")
+
 @app.route('/mnp')
 def mnp():
     return render_template("mnp.html")
