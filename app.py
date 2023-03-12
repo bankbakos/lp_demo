@@ -145,5 +145,9 @@ def roaming():
 def mnp():
     return render_template("mnp.html")
 
+@app.route('/hsi')
+def hsi():
+    return render_template("hsi.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
