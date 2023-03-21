@@ -149,5 +149,9 @@ def mnp():
 def hsi():
     return render_template("hsi.html")
 
+@app.route('/hsi2')
+def hsi2():
+    return render_template("hsi2.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
