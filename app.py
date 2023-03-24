@@ -153,5 +153,9 @@ def hsi():
 def hsi2():
     return render_template("hsi2.html")
 
+@app.route('/openai')
+def openai():
+    return render_template("openai.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
